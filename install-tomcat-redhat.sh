@@ -1,11 +1,14 @@
 #!/bin/bash
-
-sudo yum update -y 1>/dev/null
-sudo yum install boxes -y 1>/dev/null
-echo "Artisan Tek\n\n\nTomcat Installation" | boxes -d bear -a c
+echo -e "\n################################################################"
+echo -e "#                                                              #"
+echo -e "#                     ***Artisan Tek***                        #"
+echo -e "#                    Tomcat Installation                       #"
+echo -e "#                                                              #"
+echo -e "################################################################"
 
 # Installing necessary packages
-echo "\n\n################################################################"
+echo "\n\n*****Installing Necessary Packages"
+sudo yum update -y 1>/dev/null
 sudo yum install -y java wget 1>/dev/null
 echo "            -> Done"
 
