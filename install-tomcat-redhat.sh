@@ -7,7 +7,7 @@ echo -e "#                                                              #"
 echo -e "################################################################"
 
 # Installing necessary packages
-echo "\n\n*****Installing Necessary Packages"
+echo -e "\n\n*****Installing Necessary Packages"
 sudo yum update -y 1>/dev/null
 sudo yum install -y java wget 1>/dev/null
 echo "            -> Done"
