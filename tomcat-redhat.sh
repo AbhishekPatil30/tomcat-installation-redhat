@@ -19,7 +19,7 @@ sudo rm -rf apache-tomcat-9.0.68.tar.gz
 echo "            -> Done"
 
 # Configuring Tomcat server for manager, host-manager and Credential
-echo "*****Configuring Tomcat server for manager, host-manager and Credentila"
+echo "*****Configuring Tomcat server for manager, host-manager and Credentials"
 sudo git clone -q https://github.com/artisantek/tomcat-redhat.git 1>/dev/null
 sudo cp tomcat-redhat/context.xml /opt/tomcat/apache-tomcat-9.0.68/webapps/manager/META-INF/context.xml
 sudo cp tomcat-redhat/context.xml /opt/tomcat/apache-tomcat-9.0.68/webapps/host-manager/META-INF/context.xml
