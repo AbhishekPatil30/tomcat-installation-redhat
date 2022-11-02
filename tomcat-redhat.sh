@@ -20,7 +20,7 @@ sudo cp tomcat-redhat/context.xml /opt/tomcat/apache-tomcat-9.0.68/webapps/host-
 sudo cp tomcat-redhat/tomcat-users.xml /opt/tomcat/apache-tomcat-9.0.68/conf/tomcat-users.xml
 
 # Configuring Tomcat as a Service
-sudo useradd -r -m -U -d /opt/tomcat -s /bin/false tomcat
+sudo useradd -r -M -U -d /opt/tomcat -s /bin/false tomcat
 sudo chown -R tomcat: /opt/tomcat/*
 sudo cp tomcat-redhat/tomcat.service /etc/systemd/system/tomcat.service
 sudo rm -rf tomcat-redhat
