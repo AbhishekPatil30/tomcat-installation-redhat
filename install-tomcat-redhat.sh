@@ -4,7 +4,7 @@
 # Installing necessary packages
 echo "*****Installing necessary packages"
 sudo yum update -y 1>/dev/null
-sudo yum install -y java wget git 1>/dev/null
+sudo yum install -y java wget 1>/dev/null
 echo "            -> Done"
 
 # Downloading Apache Tomcat 9.0.68 version to OPT folder
@@ -20,17 +20,17 @@ echo "            -> Done"
 
 # Configuring Tomcat server for manager, host-manager and Credential
 echo "*****Configuring Tomcat server for manager, host-manager and Credentials"
-sudo git clone -q https://github.com/artisantek/tomcat-redhat.git 1>/dev/null
-sudo cp tomcat-redhat/context.xml /opt/tomcat/apache-tomcat-9.0.68/webapps/manager/META-INF/context.xml
-sudo cp tomcat-redhat/context.xml /opt/tomcat/apache-tomcat-9.0.68/webapps/host-manager/META-INF/context.xml
-sudo cp tomcat-redhat/tomcat-users.xml /opt/tomcat/apache-tomcat-9.0.68/conf/tomcat-users.xml
+cd - 1>/dev/null
+sudo cp context.xml /opt/tomcat/apache-tomcat-9.0.68/webapps/manager/META-INF/context.xml
+sudo cp context.xml /opt/tomcat/apache-tomcat-9.0.68/webapps/host-manager/META-INF/context.xml
+sudo cp tomcat-users.xml /opt/tomcat/apache-tomcat-9.0.68/conf/tomcat-users.xml
 echo "            -> Done"
 
 # Configuring Tomcat as a Service
 echo "*****Configuring Tomcat as a Service"
 sudo useradd -r -M -U -d /opt/tomcat -s /bin/false tomcat 2>/dev/null
 sudo chown -R tomcat: /opt/tomcat/*
-sudo cp tomcat-redhat/tomcat.service /etc/systemd/system/tomcat.service
+sudo cp tomcat.service /etc/systemd/system/tomcat.service
 sudo rm -rf tomcat-redhat
 sudo systemctl daemon-reload 1>/dev/null
 sudo systemctl start tomcat 1>/dev/null
