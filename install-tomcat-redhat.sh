@@ -15,7 +15,7 @@ echo "            -> Done"
 # Downloading Apache Tomcat 9.0.68 version to OPT folder
 echo "*****Downloading Apache Tomcat 9.0.68 version"
 cd /opt
-sudo systemctl stop tomcat
+sudo systemctl stop tomcat 2>/dev/null
 sudo rm -rf apache* tomcat*
 sudo mkdir -p /opt/tomcat
 sudo wget -q https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.68/bin/apache-tomcat-9.0.68.tar.gz 1>/dev/null
