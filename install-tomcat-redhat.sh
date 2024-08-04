@@ -1,7 +1,7 @@
 #!/bin/bash
 echo -e "\n################################################################"
 echo -e "#                                                              #"
-echo -e "#                     ***Artisan Tek***                        #"
+echo -e "#                     ***ABHISHEK PATIL***                     #"
 echo -e "#                    Tomcat Installation                       #"
 echo -e "#                                                              #"
 echo -e "################################################################"
@@ -46,7 +46,7 @@ sudo systemctl is-active --quiet tomcat
 echo -e "\n################################################################ \n"
 if [ $? -eq 0 ]; then
 	echo "Tomcat installed Successfully"
-	echo "Access Tomcat using $(curl -s ifconfig.me):8080"
+	echo "Access Tomcat using $(curl -s ifconfig.me):9050"
 else
 	echo "Tomcat installation failed"
 fi
